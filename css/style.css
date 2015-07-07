@@ -1,0 +1,54 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+.slide-left{
+	width:200px;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+.mian{
+	padding-left: 280px;
+}
+.list{
+	list-style:none;
+	padding-left:5px;
+}
+.list > .item{
+	border-bottom:1px solid #00518D;
+	cursor:pointer;
+	font-size:12px;
+}
+.list > .item:hover{
+	color:#00518D;
+}
+.title{
+	color: #444444;
+    margin: 5px 0 !important;
+    font-weight: 600;
+}
+.date{
+	font-size: 11px;
+    color: #666;
+    font-style: italic;
+}
+.description{
+	font-size: 14px;
+}
+.author{
+	font-weight: 500;
+}
+.img{
+	text-align: center;
+}
+
+

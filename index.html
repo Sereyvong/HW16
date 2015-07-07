@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework 3</title>
+		<!-- import css -->
+		<link href="css/style.css" rel="stylesheet"/>
+		
+		<!-- import js -->
+		<script src="js/jquery.js"></script>
+		<script>
+			// animation 
+			$(function(){
+				/*Attribute "link-file" is name of file type html */
+				/*Class "active" is current content for to show */
+				
+				// check list-item active if item have class active show it on page
+				$(".mian").load( "file/"+ /* get active item*/$(".list").find(".active").attr('link-file')/* end get active item*/+".html");
+				
+				// event click on item
+				$(".list .item").click(function(){
+					// load content from file
+					$(".mian").load( "file/"+$(this).attr('link-file')+".html");
+				});
+			});
+		</script>
+		
+	</head>
+	<body>		
+		<div class="content">
+			<div class="slide-left">
+				<img src="images/logohrd.png"/>				
+				<ul class="list">					
+					<li class="item active" link-file="facebook">Facebook ចេញ​មុខងារ​ថ្មី​ដាក់​រូបភាព​ Profile ជាប់​​ឥន្ទធនូ​អបអរ​ច្បាប់​រៀបការ​ភេទ​ដូច​គ្នា​នៅ​អាមេរិក</li>
+					<li class="item " link-file="150">អបអរ​ខួប​លើក​ទី 150 ការ​បង្កើត​សហភាព​ទូរគមនាគមន៍​អន្តរជាតិ ITU ជាមួយ​ការ​ប្រគល់​ពានរង្វាន់ ICT Award 2015​</li>
+					<li class="item" link-file="puma">ម្នាក់​ទៀត​ហើយ! PUMA ចុះ​កុងត្រា​២​ឆ្នាំ​ជា​មួយ​ គួច​ សុកុម្ភៈ ធ្វើ​​ជា​ ទូត​សុឆន្ទៈ​ប្រចាំ​កម្ពុជា​</li>					
+				</ul>
+			</div>
+			<div class="mian">	</div>
+		</div>
+	</body>
+</html>
