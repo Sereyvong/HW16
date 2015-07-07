@@ -10,12 +10,18 @@
 		<script src="js/jquery.js"></script>
 		<script>
 			$(function(){
-				
+				$.getJSON("dashboard.json", function(data){
+					for(var i=0;i<data.playlist.length;i++){
+						alert(data.playlist[i].playlistname);
+					}
+				});
 			});
 		</script>
 		
 	</head>
 	<body>		
-		
+		<div>
+			
+		</div>
 	</body>
 </html>
