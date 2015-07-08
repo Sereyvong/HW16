@@ -14,37 +14,46 @@
 		<script src="owl-carousel/owl.carousel.js"></script>
 		<script>
 			$(function(){
+				// get data from json
 				$.getJSON("dashboard.json", function(data){
+					// Playlists 
 					for(var i=0;i<data.playlist.length;i++){						
+						// create item playlist 
 						var div="<div class='item darkCyan'>"+
 									"<div class='thumbnail'>"+
-										"<img src='https://i.ytimg.com/vi/"+data.playlist[i].thumbnailurl+"/mqdefault.jpg' alt=''>"+
+										"<img src='https://i.ytimg.com/vi/"+data.playlist[i].thumbnailurl /*get image*/+"/mqdefault.jpg' alt=''>"+
 										"<div class='caption'>"+
-											"<h5 class='title'>"+data.playlist[i].playlistname+"</h5>"+
+											"<h5 class='title'>"+data.playlist[i].playlistname /*get playlistname*/+"</h5>"+
 											"<div style='float:left'><img src='images/avatar.jpg' style='width:50px;'/></div>"+
-											"<div class='author'><p>"+data.playlist[i].username+"</p></div>"+
+											"<div class='author'><p>"+data.playlist[i].username/*get user*/+"</p></div>"+
 											"<div class='clearfix'></div>"+
 										"</div>"+
 									"</div>"+
 								"</div>";
+						// append playlist
 						$("#playlists").append(div);
 					}
+					// slide show function
 					$("#playlists").owlCarousel({items:4,autoPlay : true,stopOnHover : true});
 					
+					// Videos
 					for(var i=0;i<data.video.length;i++){						
+						// create item video 
 						var div="<div class='item darkCyan'>"+
 									"<div class='thumbnail'>"+
-										"<img src='https://i.ytimg.com/vi/"+data.video[i].youtubeurl+"/mqdefault.jpg' alt=''>"+
+										"<img src='https://i.ytimg.com/vi/"+data.video[i].youtubeurl /*get image*/+"/mqdefault.jpg' alt=''>"+
 										"<div class='caption'>"+
-											"<div style='min-height:40px;'><h5 class='title'>"+data.video[i].videoname+"</h5></div>"+
+											"<div style='min-height:40px;'><h5 class='title'>"+data.video[i].videoname /*get video name*/+"</h5></div>"+
 											"<div style='float:left'><img src='images/avatar.jpg' style='width:50px;'/></div>"+
-											"<div class='author'><p>"+data.video[i].username+"</p></div>"+
+											"<div class='author'><p>"+data.video[i].username /*get user*/+"</p></div>"+
 											"<div class='clearfix'></div>"+
 										"</div>"+
 									"</div>"+
 								"</div>";
+						// append videos
 						$("#videos").append(div);
 					}
+					// slide show function
 					$("#videos").owlCarousel({items:4,autoPlay : true,stopOnHover : true});
 				});				
 			});
