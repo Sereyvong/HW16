@@ -5,21 +5,113 @@
 		<!-- import css -->
 		<link href="css/bootstrap.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
+		<!-- Owl Carousel Assets -->
+		<link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="owl-carousel/owl.theme.css" rel="stylesheet">
 		
 		<!-- import js -->
 		<script src="js/jquery.js"></script>
+		<script src="owl-carousel/owl.carousel.min.js"></script>
 		<script>
 			$(function(){
 				$.getJSON("dashboard.json", function(data){
 					for(var i=0;i<data.playlist.length;i++){
-						alert(data.playlist[i].playlistname);
+						//alert(data.playlist[i].playlistname);
 					}
 				});
+				$("#owl-example").owlCarousel();
 			});
 		</script>
-		
 	</head>
 	<body>		
+		<div class="container">
+			<div class="page-header">
+				<h1>Playlist</h1>				
+			</div> 
+			<div class="row" id="owl-example">
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h4 style="">Thumbnail label</h4>
+							<p><img src="images/avatar.jpg" style="width:50px;"/></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item darkCyan">
+					<div class="thumbnail">
+						<img src="images/mqdefault.jpg" alt="...">
+						<div class="caption">
+							<h3>Thumbnail label</h3>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
 		<div>
 			
 		</div>
